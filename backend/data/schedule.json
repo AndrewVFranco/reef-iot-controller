@@ -1,0 +1,76 @@
+{
+  "pumps": {
+    "0": {
+      "role": "AWC_OUT",
+      "enabled": true,
+      "schedule_mode": "INTERVAL",
+      "interval_minutes": 120,
+      "volume_ml": 90.0,
+      "restrict_to_window": true,
+      "start_minutes": 420,
+      "end_minutes": 1200,
+      "scheduled_doses": []
+    },
+    "1": {
+      "role": "AWC_IN",
+      "enabled": true,
+      "schedule_mode": "INTERVAL",
+      "interval_minutes": 120,
+      "volume_ml": 90.0,
+      "restrict_to_window": true,
+      "start_minutes": 420,
+      "end_minutes": 1200,
+      "scheduled_doses": []
+    },
+    "2": {
+      "role": "ATO",
+      "enabled": true,
+      "schedule_mode": "INTERVAL",
+      "interval_minutes": 0,
+      "volume_ml": 0.0,
+      "restrict_to_window": false,
+      "start_minutes": 480,
+      "end_minutes": 1320,
+      "scheduled_doses": []
+    },
+    "3": {
+      "role": "DOSER",
+      "enabled": false,
+      "schedule_mode": "SCHEDULED",
+      "interval_minutes": 1,
+      "volume_ml": 5.0,
+      "restrict_to_window": false,
+      "start_minutes": 480,
+      "end_minutes": 1320,
+      "scheduled_doses": []
+    }
+  },
+  "sensors": {
+    "0": {
+      "role": "TANK_LEVEL",
+      "enabled": true,
+      "active_low": true
+    },
+    "1": {
+      "role": "CONTAINER_LEVEL",
+      "enabled": false,
+      "active_low": true
+    },
+    "2": {
+      "role": "CONTAINER_LEVEL",
+      "enabled": false,
+      "active_low": true
+    },
+    "3": {
+      "role": "CONTAINER_LEVEL",
+      "enabled": false,
+      "active_low": true
+    },
+    "4": {
+      "role": "CONTAINER_LEVEL",
+      "enabled": false,
+      "active_low": true
+    }
+  },
+  "last_updated": "2026-06-15T04:34:18.440648+00:00"
+}
