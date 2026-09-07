@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base resets ─────────────────────────────────────────────────────────── */
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-surface-900 text-white font-sans;
+    min-height: 100dvh;
+  }
+
+  /* Prevent layout shift from scrollbar appearing/disappearing */
+  html {
+    scrollbar-gutter: stable;
+  }
+}
+
+/* ── Custom scrollbar ────────────────────────────────────────────────────── */
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: theme("colors.surface.600") transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: theme("colors.surface.600");
+    border-radius: 9999px;
+  }
+}
+
+/* ── Recharts overrides ──────────────────────────────────────────────────── */
+
+.recharts-tooltip-wrapper {
+  outline: none !important;
+}
+
+.recharts-default-tooltip {
+  background-color: theme("colors.surface.700") !important;
+  border: 1px solid theme("colors.surface.600") !important;
+  border-radius: 8px !important;
+  color: white !important;
+}
+
+/* ── Utility classes ─────────────────────────────────────────────────────── */
+
+@layer components {
+  /* Card base */
+  .card {
+    @apply bg-surface-800 rounded-2xl shadow-card border border-surface-600;
+  }
+
+  /* Monospace data values */
+  .data-value {
+    @apply font-mono text-accent-light tabular-nums;
+  }
+
+  /* Status pill */
+  .status-pill {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium;
+  }
+
+  /* Subtle section label */
+  .section-label {
+    @apply text-xs font-medium uppercase tracking-widest text-gray-500;
+  }
+
+  /* Touch-friendly tap target */
+  .tap-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+}
